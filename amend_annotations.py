@@ -4,8 +4,8 @@ import csv
 from pathlib import Path
 
 size_list = []
-path = 'C:/Users/BangoCs/Desktop/MyDocs Offline/year4/semester 2/FYP/datasets/flickr_logos_27_dataset/flickr_logos_27_dataset_images/'
-partial_csv = Path('C:/Users/BangoCs/Desktop/MyDocs Offline/year4/semester 2/FYP/datasets/flickr_logos_27_dataset/partial.csv')
+path = 'path/flickr_logos_27_dataset_images/'
+partial_csv = Path('path/partial.csv')
 
 
 if partial_csv.is_file():
