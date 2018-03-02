@@ -13,10 +13,10 @@
 Usage:
   # From tensorflow/models/
   # Create train data:
-  python generate_tfrecord.py --csv_input=path/datasets/flickr_logos_27_dataset/training_set.csv  --output_path=C:/Users/BangoCs/PycharmProjects/fyp_logo_dec/train.record
+  python generate_tfrecord.py --csv_input=path/datasets/flickr_logos_27_dataset/training_set.csv  --output_path=path/fyp_logo_dec/train.record
 
   # Create test data:
-  python generate_tfrecord.py --csv_input=path/datasets/flickr_logos_27_dataset/test_set.csv  --output_path=C:/Users/BangoCs/PycharmProjects/fyp_logo_dec/test.record
+  python generate_tfrecord.py --csv_input=path/datasets/flickr_logos_27_dataset/test_set.csv  --output_path=pathfyp_logo_dec/test.record
 """
 from __future__ import division
 from __future__ import print_function
