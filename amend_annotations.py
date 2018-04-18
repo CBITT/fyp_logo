@@ -8,15 +8,15 @@ from more_itertools import unique_everseen
 
 """Create VOC style training csv from flick27 dataset"""
 
-path_to_images = 'C:/Users/BangoCs/Desktop/fyp_final/flickr_logos_27_dataset/flickr_logos_27_dataset_images/'
-partial_csv = Path('C:/Users/BangoCs/Desktop/fyp_final/data/bin/partial.csv')
-original_training_csv = Path('C:/Users/BangoCs/Desktop/fyp_final/data/bin/training_set.csv')
-training_csv_cut = Path('C:/Users/BangoCs/Desktop/fyp_final/data/bin/training_cut.csv')
-test_csv_no_sizes = Path('C:/Users/BangoCs/Desktop/fyp_final/data/bin/test_set.csv')
-merged_training_repetitive = Path('C:/Users/BangoCs/Desktop/fyp_final/data/bin/training_rep.csv')
-merged_training_no_repeats = Path('C:/Users/BangoCs/Desktop/fyp_final/data/training.csv')
-merged_test_repetitive = Path('C:/Users/BangoCs/Desktop/fyp_final/data/bin/test_rep.csv')
-merged_test_no_repeats = Path('C:/Users/BangoCs/Desktop/fyp_final/data/test.csv')
+path_to_images = 'C:/path/to/flickr_logos_27_dataset/flickr_logos_27_dataset_images/'
+partial_csv = Path('C://path/to/data/bin/partial.csv')
+original_training_csv = Path('C:/path/to/data/bin/training_set.csv')
+training_csv_cut = Path('C:/path/to/data/bin/training_cut.csv')
+test_csv_no_sizes = Path('C://path/to/data/bin/test_set.csv')
+merged_training_repetitive = Path('C:/path/to/data/bin/training_rep.csv')
+merged_training_no_repeats = Path('C:/path/to/data/training.csv')
+merged_test_repetitive = Path('C:/path/to/data/bin/test_rep.csv')
+merged_test_no_repeats = Path('C:/path/to/data/test.csv')
 
 #write partial_csv to contain all image sizes with corresponding im_filenames
 try:
