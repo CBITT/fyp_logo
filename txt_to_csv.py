@@ -14,8 +14,8 @@ import csv
 from pathlib import Path
 
 #inintialise location for training and test sets
-training_set = Path('path/to/data/training_set.csv')
-test_set = Path('path/to/data/test_set.csv')
+training_set = Path('path/to/data/bin/training_set.csv')
+test_set = Path('path/to/data/bin/test_set.csv')
 test_txt = Path('path/to/flickr_logos_27_dataset/flickr_logos_27_dataset_query_set_annotation.txt')
 training_txt = Path('path/to/flickr_logos_27_dataset/flickr_logos_27_dataset_training_set_annotation.txt')
 
@@ -31,6 +31,7 @@ try:
                 writer = csv.writer(training)
                 writer.writerow(('im_filename', 'classname', 'training_subset_of_class','xmin','ymin','xmax','ymax'))
                 writer.writerows(lines)
+                print('training_set.csv with original content created')
 except:
     print('Error in converting flickr_logos_27_dataset_training_set_annotation.txt to training_set.csv')
 
@@ -59,5 +60,6 @@ try:
                 test.write(features[i][:-1])
                 line_break += 1
         test.close()
+        print('test_set.csv with original content created')
 except:
     print('Error in converting flickr_logos_27_dataset_query_set_annotation.txt to test_set.csv')
