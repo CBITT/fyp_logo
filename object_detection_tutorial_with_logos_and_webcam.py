@@ -1,14 +1,4 @@
 
-# coding: utf-8
-
-# # Object Detection Demo
-# Welcome to the object detection inference walkthrough!  This notebook will walk you step by step through the process of using a pre-trained model to detect objects in an image. Make sure to follow the [installation instructions](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md) before you start.
-
-# # Imports
-
-# In[54]:
-
-
 import numpy as np
 import os
 import six.moves.urllib as urllib
@@ -23,23 +13,8 @@ from matplotlib import pyplot as plt
 from PIL import Image
 import cv2
 
-# ## Env setup
-
-# In[55]:
-
-
-# This is needed to display the images.
-
-
 # This is needed since the notebook is stored in the object_detection folder.
-sys.path.append("C:/Program Files/models/research/object_detection/")
-
-
-# ## Object detection imports
-# Here are the imports from the object detection module.
-
-# In[56]:
-
+sys.path.append("C:/Users/BangoCs/Desktop/fyp/MAY_models_backup/models/research/object_detection/")
 
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
@@ -57,16 +32,16 @@ from object_detection.utils import visualization_utils as vis_util
 
 
 # What model to download.
-MODEL_NAME = 'C:/Program Files/models/research/object_detection/logo2_graph'
+MODEL_NAME = 'path/to/models/research/object_detection/logo2670_graph'
 
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = os.path.join('C:/Program Files/models/research/object_detection/training', 'fyp_logo_dec.pbtxt')
+PATH_TO_LABELS = os.path.join('path/to/models/research/object_detection/training', 'fyp_logo_labelmap.pbtxt')
 
-NUM_CLASSES = 27
+NUM_CLASSES = 28
 
 
 # ## Download Model
@@ -106,7 +81,7 @@ def load_image_into_numpy_array(image):
   return np.array(image.getdata()).reshape(
       (im_height, im_width, 3)).astype(np.uint8)
 
-PATH_TO_TEST_IMAGES_DIR = 'C:/Program Files/models/research/object_detection/test_images'
+PATH_TO_TEST_IMAGES_DIR = 'path/to/models/research/object_detection/test_images'
 TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(1, 2) ]
 
 # Size, in inches, of the output images.
@@ -143,7 +118,7 @@ while (True):
         category_index,
         use_normalized_coordinates=True,
         line_thickness=8)
-    cv2.imshow('Csaba\'s Logo Detection', cv2.resize(frame, (600, 400)))
+    cv2.imshow('Csaba\'s Logo Detection', cv2.resize(frame, (600, 500)))
     if cv2.waitKey(1) == ord('q'):
         break
 
